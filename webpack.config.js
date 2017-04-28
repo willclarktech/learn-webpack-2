@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   context: path.resolve(__dirname, './src'),
@@ -19,10 +18,6 @@ module.exports = {
       name: 'commons',
       filename: 'commons.js',
       minChunks: 2,
-    }),
-    new ExtractTextPlugin({
-      filename: '[name].bundle.css',
-      allChunks: true,
     }),
   ],
   devServer: {
@@ -46,16 +41,16 @@ module.exports = {
           },
         }],
       },
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     'style-loader',
-      //     {
-      //       loader: 'css-loader',
-      //       options: { modules: true },
-      //     }
-      //   ],
-      // },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: { modules: true },
+          }
+        ],
+      },
       {
         test: /\.s[ac]ss$/,
         use: [
@@ -66,15 +61,6 @@ module.exports = {
           },
           'sass-loader',
         ],
-      },
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            'css-loader',
-            // 'sass-loader',
-          ],
-        }),
       },
     ],
   },
