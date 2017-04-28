@@ -23,6 +23,12 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, './src'),
   },
+  resolve: {
+    modules: [
+      path.resolve(__dirname, './src'),
+      'node_modules',
+    ],
+  },
   module: {
     rules: [
       {
