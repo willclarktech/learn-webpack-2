@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     app: './app.js',
     extra: './extra.js',
+    styles: './styles.js',
   },
   output: {
     path: path.resolve(__dirname, './dist/assets'),
@@ -33,6 +34,10 @@ module.exports = {
             presets: ['stage-0'],
           },
         }],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
