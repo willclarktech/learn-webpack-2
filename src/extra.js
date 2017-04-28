@@ -1,5 +1,5 @@
 import moment from 'moment'
 
-const moment = moment()
+const m = moment()
 
-console.log(moment)
+console.log(m)
