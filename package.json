@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "webpack:dev": "webpack",
     "webpack": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
