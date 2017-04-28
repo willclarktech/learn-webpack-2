@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "moment": "^2.18.1"
   }
 }
