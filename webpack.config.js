@@ -4,7 +4,8 @@ const path = require('path')
 module.exports = {
   context: path.resolve(__dirname, './src'),
   entry: {
-    app: ['./app.js', './extra.js'],
+    app: './app.js',
+    extra: './extra.js',
   },
   output: {
     path: path.resolve(__dirname, './dist'),
