@@ -1,6 +1,8 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css?family=Eagle+Lake');
 
+* { visibility: visible; }
+
 h1 {
   font-family: 'Eagle Lake';
   color: cyan;
