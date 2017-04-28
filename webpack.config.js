@@ -22,4 +22,18 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, './src'),
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: ['stage-0'],
+          },
+        }],
+      },
+    ],
+  },
 }
